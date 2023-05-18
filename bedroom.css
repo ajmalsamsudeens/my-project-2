@@ -1,0 +1,1432 @@
+* {
+    box-sizing:border-box;
+}
+body {
+    margin:0;
+    padding:0 40px;
+    font-family:Arial, sans-serif;
+    background:#B5A391;
+}
+header {
+    margin:0;
+    padding:10px 0;
+    background:#D0C2B3;
+    min-width:240px;
+    float:left;
+    position:relative;
+    width:100%;
+    left:0%;
+}
+header h1 {
+    margin:0;
+    padding:0 10px;
+    font-size:2.4em;
+}
+header p {
+    padding:0 10px;
+}
+
+h3 {
+    margin:0;
+    padding:0;
+    font-size:1em;
+    font-weight:normal;
+}
+
+
+
+/* common house bits first */
+house-plan {
+    display:block;
+    margin:0;
+    min-width:240px;
+    background:#D0C2B3;
+    float:left;
+    position:relative;
+    width:100%;
+    left:0%;
+}
+house-plan * {
+    display:block;
+    position:relative;
+    text-align:center;
+}
+house-plan h2 {
+    margin:0;
+    padding:30px 0;
+    text-align:center;
+    position:relative;
+    height:2em;
+}
+house-plan h2 strong {
+    display:block;
+    position:absolute;
+    width:100%;
+    height:0;
+    top:50%;
+    border-top:2px solid #000;
+    z-index:10;
+}
+house-plan h2:before {
+    content:"";
+    display:block;
+    position:absolute;
+    left:1px;
+    bottom:0.95em;
+    width:10px;
+    height:10px;
+    border-top:2px solid #000;
+    border-left:2px solid #000;
+    -webkit-transform:rotate(-45deg);
+    -ms-transform:rotate(-45deg);
+    transform:rotate(-45deg);
+}
+house-plan h2:after {
+    content:"";
+    display:block;
+    position:absolute;
+    bottom:0.95em;
+    right:1px;
+    width:10px;
+    height:10px;
+    border-top:2px solid #000;
+    border-right:2px solid #000;
+    -webkit-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    transform:rotate(45deg);
+}
+house-plan h2 span {
+    display:inline-block;
+    padding:0 .2em;
+    background:#D0C2B3;
+    position:relative;
+    bottom:.7em;
+    z-index:20;
+}
+four-metres,
+five-metres,
+six-metres,
+seven-metres,
+eight-metres,
+nine-metres {
+    display:none;
+    margin:0;
+    padding:0;
+}
+four-metres {
+    display:inline;
+}
+
+land-area {
+    background:#98C759;
+}
+
+/* doors */
+door-left {
+    width:45px;
+    height:50px;
+    background:#fff;
+    overflow:hidden;
+    position:absolute;
+}
+door-left:before {
+    content:"";
+    width:90px;
+    height:90px;
+    border:1px solid #ccc;
+    -webkit-border-radius:45px;
+    -moz-border-radius:45px;
+    -ms-border-radius:45px;
+    -o-border-radius:45px;
+    position:absolute;
+    right:0;
+    bottom:0;
+}
+door-left:after {
+    content:"";
+    width:1px;
+    height:45px;
+    border:1px solid #000;
+    background:#666;
+    position:absolute;
+    left:0;
+    bottom:0;
+}
+door-right {
+    width:45px;
+    height:50px;
+    background:#fff;
+    overflow:hidden;
+    position:absolute;
+}
+door-right:before {
+    content:"";
+    width:90px;
+    height:90px;
+    border:1px solid #ccc;
+    -webkit-border-radius:45px;
+    -moz-border-radius:45px;
+    -ms-border-radius:45px;
+    -o-border-radius:45px;
+    position:absolute;
+    left:0;
+    bottom:0;
+}
+door-right:after {
+    content:"";
+    width:1px;
+    height:45px;
+    border:1px solid #000;
+    background:#666;
+    position:absolute;
+    right:0;
+    bottom:0;
+}
+
+/* beds */
+queen-bed {
+    position:absolute;
+    width:102px;
+    height:76px;
+    border:1px solid #000;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    -ms-border-radius:4px;
+    -o-border-radius:4px;
+    border-radius:4px;
+    background:#ddd;
+    line-height:74px;
+    padding-right:30px;
+}
+queen-bed:before {
+    content:"";
+    display:block;
+    position:absolute;
+    right:22px;
+    width:16px;
+    height:74px;
+    background:#bbb;
+    border-right:1px solid #666;
+}
+pillow-one,
+pillow-two {
+    position:absolute;
+    right:1px;
+    width:18px;
+    height:28px;
+    background:#fff;
+    border:1px solid #000;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    -ms-border-radius:4px;
+    -o-border-radius:4px;
+    border-radius:4px;
+}
+pillow-one {
+    top:6px;
+}
+pillow-two {
+    bottom:6px;
+}
+
+/* built in wardrobes */
+built-in {
+    width:30px;
+    height:80px;
+    border-right:1px solid #000;
+    border-top:4px solid #000;
+    border-bottom:4px solid #000;
+    position:absolute;
+    left:0;
+}
+
+/* windows */
+window-one,
+window-two {
+    display:block;
+    background:#fff;
+    position:absolute;
+}
+
+/* rooms etc. */
+front-fence-right {
+    position:absolute;
+    top:0;
+    right:0;
+    width:75%;
+    height:0;
+    border-top:2px dashed #000;
+}
+front-fence-left {
+    display:none;
+}
+front-garden {
+    display:block;
+    width:100%;
+    height:80px;
+}
+front-verandah {
+    width:100%;
+    height:50px;
+    background:#fff;
+    border:12px solid #000;
+    border-top:1px solid #000;
+    border-bottom:0;
+}
+front-verandah:before {
+    content:"";
+    width:74%;
+    position:absolute;
+    top:0;
+    right:0;
+    border:2px dotted #000;
+}
+front-verandah h3 {
+    line-height:50px;
+}
+bedroom-one {
+    float:right;
+    width:74%;
+    height:180px;
+    border-top:12px solid #000;
+    border-right:12px solid #000;
+    border-left:8px solid #000;
+    border-bottom:0;
+    background:#fff;
+}
+bedroom-one h3 {
+    position:absolute;
+    left:40px;
+    right:0;
+    top:20px;
+}
+bedroom-one queen-bed {
+    right:8%;
+    bottom:14px;
+    -webkit-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform:rotate(90deg);
+}
+bedroom-one window-one {
+    width:40%;
+    height:10px;
+    top:-11px;
+    left:30%;
+}
+bedroom-one window-two {
+    display:none;
+}
+bedroom-one door-right {
+    top:30px;
+    left:-6px;
+    -webkit-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    transform:rotate(-90deg);
+}
+bedroom-one built-in {
+    bottom:-4px;
+}
+hallway-box {
+    float:left;
+    width:26%;
+    border:12px solid #000;
+    border-right:0;
+    border-bottom:8px solid #000;
+    height:506px;
+    background:#fff;
+    z-index:50;
+}
+hallway-box h3 {
+    display:none;
+}
+hallway-box door-left {
+    position:absolute;
+    top:-12px;
+    left:50%;
+    -webkit-transform:translate(-23px);
+    -ms-transform:translate(-23px);
+    transform:translate(-23px);
+}
+hallway-box door-right {
+    position:absolute;
+    bottom:-8px;
+    left:50%;
+    -webkit-transform:translate(-23px) rotate(180deg);
+    -ms-transform:translate(-23px) rotate(180deg);
+    transform:translate(-23px) rotate(180deg);
+}
+bedroom-two {
+    clear:right;
+    float:right;
+    width:74%;
+    height:190px;
+    border:8px solid #000;
+    border-right:12px solid #000;
+    border-bottom:12px solid #000;
+    z-index:10;
+    background:#fff;
+}
+bedroom-two h3 {
+    position:absolute;
+    left:40px;
+    right:0;
+    bottom:20px;
+}
+bedroom-two window-one {
+    width:28%;
+    height:10px;
+    bottom:-11px;
+    right:0;
+}
+bedroom-two queen-bed {
+    right:8%;
+    top:14px;
+    -webkit-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    transform:rotate(-90deg);
+}
+bedroom-two door-left {
+    left:-6px;
+    bottom:10px;
+    -webkit-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    transform:rotate(-90deg);
+}
+bedroom-two built-in {
+    top:-4px;
+}
+bathroom-box {
+    float:left;
+    height:140px;
+    width:50%;
+    border-right:12px solid #000;
+    border-left:8px solid #000;
+    border-bottom:8px solid #000;
+    background:#fff;
+    z-index:100;
+    margin-top:-4px;
+}
+bathroom-box h3 {
+    display:none;
+}
+bathroom-box window-one,
+bathroom-box window-two {
+    width:10px;
+    height:24px;
+    right:-11px;
+}
+bathroom-box window-one {
+    top:8px;
+}
+bathroom-box window-two {
+    bottom:8px;
+}
+bath-tub {
+    width:76px;
+    height:35px;
+    line-height:35px;
+    border:1px solid #000;
+    -webkit-border-radius:35%;
+    -moz-border-radius:35%;
+    -ms-border-radius:35%;
+    -o-border-radius:35%;
+    border-radius:35%;
+    position:absolute;
+    top:2px;
+    right:2px;
+}
+bath-tub:before {
+    content:"";
+    width:68px;
+    height:27px;
+    border:1px solid #ccc;
+    -webkit-border-radius:35%;
+    -moz-border-radius:35%;
+    -ms-border-radius:35%;
+    -o-border-radius:35%;
+    border-radius:35%;
+    position:absolute;
+    top:2px;
+    left:2px;
+}
+toilet-box {
+    width:26px;
+    height:20px;
+    border:1px solid #000;
+    -webkit-border-radius:35%;
+    -moz-border-radius:35%;
+    -ms-border-radius:35%;
+    -o-border-radius:35%;
+    border-radius:35%;
+    position:absolute;
+    right:6px;
+    bottom:10px;
+}
+toilet-box:after {
+    content:"";
+    width:8px;
+    height:26px;
+    border:1px solid #000;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    -ms-border-radius:3px;
+    -o-border-radius:3px;
+    border-radius:3px;
+    position:absolute;
+    right:-6px;
+    bottom:-5px;
+    background:#fff;
+}
+vanity-box {
+    width:20px;
+    height:40px;
+    border:1px solid #000;
+    position:absolute;
+    right:-1px;
+    bottom:46px;
+    background:#ddd;
+}
+vanity-box:before {
+    content:"";
+    width:14px;
+    height:18px;
+    border:1px solid #000;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+    border-radius:50%;
+    position:absolute;
+    top:50%;
+    -webkit-transform:translateY(-9px);
+    -ms-transform:translateY(-9px);
+    transform:translateY(-9px);
+    left:1px;
+    background:#fff;
+}
+vanity-box:after {
+    content:"";
+    position:absolute;
+    top:50%;
+    -webkit-transform:translateY(-2px);
+    -ms-transform:translateY(-2px);
+    transform:translateY(-2px);
+    left:7px;
+    width:3px;
+    height:3px;
+    border:1px solid #000;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    -ms-border-radius:2px;
+    -o-border-radius:2px;
+    border-radius:2px;
+    background:#999;
+}
+bathroom-box door-right {
+    left:-6px;
+    bottom:40px;
+    -webkit-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    transform:rotate(-90deg);
+    display:none;
+}
+bathroom-box door-left {
+    left:-6px;
+    bottom:40px;
+    -webkit-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    transform:rotate(-90deg);
+}
+linen-closet {
+    width:30px;
+    height:40px;
+    border-right:1px solid #000;
+    border-top:4px solid #000;
+    border-bottom:4px solid #000;
+    position:absolute;
+    left:0;
+    bottom:-4px;
+}
+living-room {
+    clear:both;
+    float:left;
+    width:100%;
+    border:12px solid #000;
+    margin-top:-12px;
+    z-index:20;
+    background:#fff;
+}
+kitchen-box {
+    float:right;
+    width:75%;
+    height:140px;
+}
+kitchen-box h3 {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    line-height:130px;
+    -webkit-transform:translate(-70px);
+    -ms-transform:translate(-70px);
+    transform:translate(-70px);
+}
+bench-one {
+    margin-left:45px;
+    height:40px;
+    border:1px solid #000;
+    border-top:0;
+    border-right:0;
+    background:#ddd;
+}
+cook-top {
+    display:inline-block;
+    clear:both;
+    width:30px;
+    height:30px;
+    border:1px solid #000;
+    margin:4px auto;
+    background:#999;
+    line-height:12px;
+    padding-top:2px;
+    font-size:.6em;
+}
+bench-two {
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:50px;
+    border:1px solid #000;
+    background:#ddd;
+    border-right:0;
+    -webkit-border-top-left-radius:4px;
+    -moz-border-radius-topleft:4px;
+    -ms-border-top-left-radius:4px;
+    -o-border-top-left-radius:4px;
+    border-top-left-radius:4px;
+    -webkit-border-bottom-left-radius:10px;
+    -moz-border-radius-bottomleft:10px;
+    -ms-border-bottom-left-radius:10px;
+    -o-border-bottom-left-radius:10px;
+    border-bottom-left-radius:10px;
+}
+stool-one,
+stool-two,
+stool-three {
+    position:absolute;
+    width:18px;
+    height:18px;
+    background:#999;
+    -webkit-border-radius:9px;
+    -moz-border-radius:9px;
+    -ms-border-radius:9px;
+    -o-border-radius:9px;
+    border-radius:9px;
+    bottom:-22px;
+}
+stool-one {
+    left:25%;
+}
+stool-two {
+    left:47%;
+}
+stool-three {
+    left:69%;
+}
+sink-box {
+    width:25px;
+    height:25px;
+    border:1px solid #000;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    -ms-border-radius:5px;
+    -o-border-radius:5px;
+    border-radius:5px;
+    display:inline-block;
+    margin:4px auto;
+    background:#fff;
+}
+sink-box:before {
+    content:"";
+    position:absolute;
+    top:9px;
+    left:9px;
+    width:3px;
+    height:3px;
+    border:1px solid #000;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    -ms-border-radius:2px;
+    -o-border-radius:2px;
+    border-radius:2px;
+    background:#999;
+}
+sink-box:after {
+    content:"";
+    position:absolute;
+    bottom:-6px;
+    left:9px;
+    width:3px;
+    height:10px;
+    border:1px solid #000;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    -ms-border-radius:2px;
+    -o-border-radius:2px;
+    border-radius:2px;
+    background:#fff;
+}
+fridge-freezer {
+    position:absolute;
+    top:2px;
+    left:0;
+    border:1px solid #000;
+    width:40px;
+    height:38px;
+    font-size:.6em;
+    line-height:38px;
+}
+sky-light {
+    position:absolute;
+    top:50px;
+    left:50%;
+    width:60px;
+    height:30px;
+    border:1px dashed #ccc;
+    font-size:.6em;
+    line-height:30px;
+    color:#999;
+    -webkit-transform:translate(-30px);
+    -ms-transform:translate(-30px);
+    transform:translate(-30px);
+}
+kitchen-box window-one {
+    display:none;
+}
+dining-room {
+    clear:right;
+    float:right;
+    width:100%;
+    height:140px;
+    margin-top:20px;
+}
+dining-room h3 {
+    display:none
+}
+dining-table {
+    width:61px;
+    height:61px;
+    position:absolute;
+    top:50%;
+    left:65%;
+    -webkit-transform:translate(-30px, -30px);
+    -ms-transform:translate(-30px, -30px);
+    transform:translate(-30px, -30px);
+}
+dining-table:after {
+    content:"Dining";
+    display:block;
+    position:absolute;
+    width:60px;
+    height:60px;
+    line-height:60px;
+    border:1px solid #000;
+    -webkit-border-radius:30px;
+    -moz-border-radius:30px;
+    -ms-border-radius:30px;
+    -o-border-radius:30px;
+    border-radius:30px;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:#fff;
+}
+chair-one,
+chair-two,
+chair-three,
+chair-four {
+    position:absolute;
+    width:25px;
+    height:25px;
+    border:1px solid #000;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    -ms-border-radius:3px;
+    -o-border-radius:3px;
+    border-radius:3px;
+    background:#ddd;
+    -webkit-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    transform:rotate(45deg);
+}
+chair-one {
+    top:0;
+    left:0;
+}
+chair-two {
+    top:0;
+    right:0;
+}
+chair-three {
+    bottom:0;
+    right:0;
+}
+chair-four {
+    bottom:0;
+    left:0;
+}
+kitchen-cabinet {
+    width:20px;
+    height:70px;
+    border:1px solid #000;
+    position:absolute;
+    left:2px;
+    bottom:35px;
+}
+lounge-room {
+    clear:right;
+    float:right;
+    width:100%;
+    height:180px;
+}
+lounge-room h3 {
+    top:10px;
+}
+couch-box {
+    position:absolute;
+    right:2px;
+    bottom:40px;
+    width:45px;
+    height:120px;
+    background:#999;
+    border:1px solid #000;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    -ms-border-radius:3px;
+    -o-border-radius:3px;
+    border-radius:3px;
+}
+couch-box:after {
+    content:"";
+    display:block;
+    width:34px;
+    height:99px;
+    position:absolute;
+    top:9px;
+    left:-1px;
+    border:1px solid #000;
+    -webkit-border-top-right-radius:4px;
+    -moz-border-radius-topright:4px;
+    -ms-border-top-right-radius:4px;
+    -o-border-top-right-radius:4px;
+    border-top-right-radius:4px;
+    -webkit-border-bottom-right-radius:4px;
+    -moz-border-radius-bottomright:4px;
+    -ms-border-bottom-right-radius:4px;
+    -o-border-bottom-right-radius:4px;
+    border-bottom-right-radius:4px;
+}
+coffee-table {
+    position:absolute;
+    right:54px;
+    bottom:70px;
+    width:26px;
+    height:60px;
+    background:#eee;
+    border:1px solid #000;
+    -webkit-border-radius:40%;
+    -moz-border-radius:40%;
+    -ms-border-radius:40%;
+    -o-border-radius:40%;
+    border-radius:40%;
+}
+side-table {
+    position:absolute;
+    left:2px;
+    bottom:50px;
+    width:26px;
+    height:100px;
+    background:#eee;
+    border:1px solid #000;
+}
+tv-set {
+    width:4px;
+    height:50px;
+    position:absolute;
+    top:25px;
+    left:8px;
+    background:#000;
+}
+sliding-door {
+    width:90%;
+    height:10px;
+    background:#fff;
+    position:absolute;
+    left:5%;
+    bottom:-11px;
+}
+sliding-door:after {
+    content:"";
+    width:33%;
+    height:10px;
+    border:1px solid #000;
+    position:absolute;
+    top:-1px;
+    left:33%;
+}
+lounge-room window-one {
+    display:none;
+}
+back-deck {
+    clear:both;
+    width:100%;
+    height:80px;
+    background:#ddd;
+    border-bottom:1px solid #000;
+    border-top:0;
+}
+back-deck h3 {
+    line-height:80px;
+}
+back-garden {
+    clear:both;
+    width:100%;
+    height:200px;
+}
+left-fence {
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0;
+    height:100%;
+    border-left:2px dashed #000;
+}
+right-fence {
+    position:absolute;
+    right:0;
+    bottom:0;
+    width:0;
+    height:100%;
+    border-right:2px dashed #000;
+}
+back-fence {
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    height:0;
+    border-bottom:2px dashed #000;
+}
+
+main,
+footer {
+    clear:both;
+    display:block;
+    margin:0;
+    padding:20px 10px;
+    min-width:240px;
+    background:#D0C2B3;
+    width:100%;
+    left:0;
+}
+main h2,
+footer p {
+    margin:0;
+}
+
+/* 5 metres */
+@media only screen and (min-width:375px) and (max-width:624px), (min-width:725px) {
+    four-metres {
+        display:none;
+    }
+    five-metres {
+        display:inline;
+    }
+    living-room {
+        width:76%;
+    }
+    kitchen-box {
+        width:66%;
+    }
+    kitchen-box sky-light {
+        display:none;
+    }
+    kitchen-box window-one {
+        display:block;
+        position:absolute;
+        width:10px;
+        height:48px;
+        top:41px;
+        right:-11px;
+        background:#fff;
+    }
+    kitchen-box h3 {
+        -webkit-transform:translate(0);
+        -ms-transform:translate(0);
+        transform:translate(0);
+    }
+    dining-room window-one {
+        width:10px;
+        height:50%;
+        right:-11px;
+        top:50%;
+        -webkit-transform:translateY(-50%);
+        -ms-transform:translateY(-50%);
+        transform:translateY(-50%);
+    }
+    back-deck {
+        width:76%;
+        border-right:1px solid #000;
+    }
+}
+
+/* 6 metres */
+@media only screen and (min-width:425px) and (max-width:624px), (min-width:825px) {
+    five-metres {
+        display:none;
+    }
+    six-metres {
+        display:inline;
+    }
+    front-fence-right {
+        width:80%;
+    }
+    house-box {
+        width:80%;
+    }
+    hallway-box {
+        height:466px;
+    }
+    bedroom-one window-two {
+        width:10px;
+        height:40%;
+        top:50%;
+        right:-11px;
+        left:auto;
+        background:#fff;
+        -webkit-transform:translateY(-50%);
+        -ms-transform:translateY(-50%);
+        transform:translateY(-50%);
+    }
+    bedroom-two window-one {
+        width:10px;
+        height:40%;
+        top:50%;
+        right:-11px;
+        bottom:auto;
+        -webkit-transform:translateY(-50%);
+        -ms-transform:translateY(-50%);
+        transform:translateY(-50%);
+    }
+    bathroom-box {
+        width:74%;
+        height:100px;
+    }
+    bathroom-box window-one {
+        height:50%;
+        top:25%;
+    }
+    bathroom-box window-two {
+        display:none;
+    }
+    vanity-box {
+        -webkit-transform:rotate(90deg);
+        -ms-transform:rotate(90deg);
+        transform:rotate(90deg);
+        left:40%;
+        bottom:-21px;
+        right:auto;
+        height:60px;
+    }
+    bathroom-box door-left {
+        display:none;
+    }
+    bathroom-box door-right {
+        display:block;
+    }
+    living-room {
+        width:100%;
+    }
+    kitchen-box {
+        width:73%;
+    }
+    back-deck {
+        width:100%;
+    }
+}
+
+/* 7 metres */
+@media only screen and (min-width:475px) and (max-width:624px), (min-width:1025px) {
+    six-metres {
+        display:none;
+    }
+    seven-metres {
+        display:inline;
+    }
+    front-fence-right {
+        width:42%;
+    }
+    front-fence-left {
+        display:block;
+        content:"";
+        position:absolute;
+        top:0;
+        left:0;
+        width:42%;
+        height:0;
+        border-top:2px dashed #000;
+    }
+    house-box {
+        width:100%;
+    }
+    front-verandah:before {
+        width:40%;
+    }
+    front-verandah:after {
+        content:"";
+        width:40%;
+        position:absolute;
+        top:0;
+        left:0;
+        border:2px dotted #000;
+    }
+    bedroom-one {
+        width:42%;
+        height:190px;
+        border-bottom:8px solid #000;
+    }
+    hallway-box {
+        float:right;
+        width:16%;
+        border-left:0;
+        border-bottom:0;
+        height:190px;
+    }
+    hallway-box door-right {
+        display:none;
+    }
+    bedroom-two {
+        clear:none;
+        float:right;
+        width:42%;
+        height:190px;
+        border:12px solid #000;
+        border-right:8px solid #000;
+        border-bottom:8px solid #000;
+    }
+    bedroom-two h3 {
+        bottom:auto;
+        top:20px;
+        left:0;
+        right:40px;
+    }
+    bedroom-two window-one {
+        height:10px;
+        width:40%;
+        right:30%;
+        top:-6px;
+    }
+    bedroom-two door-left {
+        -webkit-transform:rotate(90deg);
+        -ms-transform:rotate(90deg);
+        transform:rotate(90deg);
+        top:30px;
+        left:auto;
+        right:-6px;
+        bottom:auto;
+    }
+    bedroom-two built-in {
+        top:auto;
+        left:auto;
+        right:0;
+        bottom:-4px;
+        -webkit-transform:rotate(180deg);
+        -ms-transform:rotate(180deg);
+        transform:rotate(180deg);
+    }
+    bedroom-two queen-bed {
+        top:auto;
+        left:5%;
+        right:auto;
+        bottom:14px;
+        -webkit-transform:rotate(90deg);
+        -ms-transform:rotate(90deg);
+        transform:rotate(90deg);
+    }
+    bathroom-box {
+        height:140px;
+        width:42%;
+        clear:right;
+        float:right;
+        margin-top:0;
+    }
+    vanity-box {
+        -webkit-transform:rotate(0);
+        -ms-transform:rotate(0);
+        transform:rotate(0);
+        left:auto;
+        bottom:44px;
+        right:-1px;
+        height:40px;
+    }
+    bathroom-box window-one {
+        top:auto;
+        bottom:-7px;
+        right:0;
+        height:6px;
+        width:24%;
+    }
+    living-room {
+        width:88%;
+    }
+    kitchen-box {
+        position:absolute;
+        top:-140px;
+        left:-12px;
+        background:#fff;
+        width:51%;
+        border-left:12px solid #000;
+    }
+    kitchen-box:before {
+        content:"";
+        background:#fff;
+        width:42%;
+        height:100%;
+        position:absolute;
+        top:0;
+        right:-42%;
+    }
+    kitchen-box h3 {
+        -webkit-transform:translateX(70px);
+        -ms-transform:translateX(70px);
+        transform:translateX(70px);
+    }
+    kitchen-box window-one {
+        display:none;
+    }
+    fridge-freezer {
+        left:auto;
+        right:1px;;
+    }
+    bench-one {
+        margin:0 45px 0 0;
+        height:40px;
+        border:1px solid #000;
+        border-top:0;
+        border-right:1px solid #000;
+        border-left:0;
+        background:#ddd;
+    }
+    bench-two {
+        width:100%;
+        border-right:1px solid #000;
+        border-left:0;
+        -webkit-border-radius:0;
+        -moz-border-radius:0;
+        -ms-border-radius:0;
+        -o-border-radius:0;
+        border-radius:0;
+        -webkit-border-top-right-radius:4px;
+        -moz-border-radius-topright:4px;
+        -ms-border-top-right-radius:4px;
+        -o-border-top-right-radius:4px;
+        border-top-right-radius:4px;
+        -webkit-border-bottom-right-radius:10px;
+        -moz-border-radius-bottomright:10px;
+        -ms-border-bottom-right-radius:10px;
+        -o-border-bottom-right-radius:10px;
+        border-bottom-right-radius:10px;
+    }
+    kitchen-box sky-light {
+        display:block;
+    }
+    dining-room {
+        width:33%;
+    }
+    dining-table {
+        left:50%;
+    }
+    kitchen-cabinet {
+        left:18%;
+        bottom:auto;
+        top:-18px;
+        width:70px;
+        height:20px;
+    }
+    lounge-room {
+        clear:left;
+        float:left;
+        width:48%;
+        height:200px;
+        margin:20px 0 0;
+        position:relative;
+        left:0;
+        top:20px;
+    }
+    lounge-room h3 {
+        position:absolute;
+        width:100%;
+        top:120px;
+    }
+    couch-box {
+        -webkit-transform:rotate(-90deg);
+        -ms-transform:rotate(-90deg);
+        transform:rotate(-90deg);
+        right:auto;
+        bottom:auto;
+        top:-10px;
+        left:40%;
+    }
+    coffee-table {
+        -webkit-transform:rotate(-90deg);
+        -ms-transform:rotate(-90deg);
+        transform:rotate(-90deg);
+        right:auto;
+        bottom:auto;
+        top:70px;
+        left:45%;
+    }
+    side-table {
+        -webkit-transform:rotate(-90deg);
+        -ms-transform:rotate(-90deg);
+        transform:rotate(-90deg);
+        left:45%;
+        bottom:-15px;
+    }
+    sliding-door {
+        width:50%;
+        left:auto;
+        right:4px;
+    }
+    lounge-room window-one {
+        display:block;
+        width:50%;
+        height:10px;
+        position:absolute;
+        left:26%;
+        bottom:9px;
+    }
+    back-deck {
+        width:88%;
+    }
+}
+
+/* 8 metres */
+@media only screen and (min-width:525px) and (max-width:624px), (min-width:1125px) {
+    seven-metres {
+        display:none;
+    }
+    eight-metres {
+        display:inline;
+    }
+    front-fence-right {
+        width:49%;
+    }
+    front-fence-left {
+        width:36%;
+    }
+    house-box {
+        width:87%;
+    }
+    bedroom-one window-two {
+        display:block;
+    }
+    bathroom-box window-one {
+        width:10px;
+        height:24px;
+        right:-11px;
+        top:8px;
+
+    }
+    bathroom-box window-two {
+        display:block;
+    }
+    living-room {
+        width:100%;
+    }
+    kitchen-box {
+        width:45%;
+    }
+    dining-room {
+        width:40%;
+    }
+    back-deck {
+        width:100%;
+    }
+}
+
+/* 9 metres */
+@media only screen and (min-width:575px) and (max-width:624px), (min-width:1275px) {
+    eight-metres {
+        display:none;
+    }
+    nine-metres {
+        display:inline;
+    }
+    front-fence-right {
+        width:43%;
+    }
+    front-fence-left {
+        width:43%;
+    }
+    house-box {
+        max-width:415px;
+        margin:0 auto;
+    }
+    bedroom-two window-two {
+        width:10px;
+        height:40%;
+        top:30%;
+        left:-11px;
+    }
+    kitchen-box h3 {
+        -webkit-transform:translateX(0);
+        -ms-transform:translateX(0);
+        transform:translateX(0);
+    }
+    kitchen-box sky-light {
+        display:none;
+    }
+    kitchen-box window-one {
+        display:block;
+        right:auto;
+        left:-11px;
+    }
+    lounge-room window-two {
+        width:10px;
+        height:37%;
+        top:7%;
+        left:-11px;
+    }
+    back-deck {
+        border-left:1px solid #000;
+    }
+}
+@media only screen and (min-width:625px) {
+    header,
+    main,
+    footer {
+        clear:right;
+        float:right;
+        width:52%;
+        position:relative;
+        right:5%;
+        background:transparent;
+        padding:10px 0;
+    }
+    header h1,
+    header h2,
+    header p {
+        padding:0;
+    }
+    house-plan {
+        float:left;
+        width:43%;
+        border-bottom:40px solid #D0C2B3;
+    }
+}

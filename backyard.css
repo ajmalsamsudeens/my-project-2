@@ -1,0 +1,91 @@
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700');  /*font-family: 'Montserrat', sans-serif;*/
+
+/* CONFIGURATION */
+
+body {
+	background:url(https://i.imgur.com/Y7WsXbF.jpg);
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}
+
+* {font-family:'calibri';}
+
+/* FORUM CATEGORY */
+
+.frm-category {
+	margin:25px auto;
+	width:880px;
+	
+	font-family: 'Montserrat', sans-serif;
+	text-transform:uppercase;
+	font-size:45px;
+	text-align:center;
+	color:#fff;
+	font-weight:700;
+}
+
+/* FORUM ROWS WRAPPER */
+
+.frm-rowrap {
+	margin:15px auto;
+	width:800px;
+	padding:40px;
+	background:rgba(0,0,0,0.275);
+	color:#fff;
+}
+
+/* FORUM TITLE */
+
+.frm-title {
+	position:absolute;
+	margin:-20px 25px;
+	
+	font-size:12px;
+	font-family: 'Montserrat', sans-serif;
+	text-transform:uppercase;
+	
+}
+
+/* MACRO */
+
+.frm-rowrap span {
+	font-size:30px;
+	padding:20px;
+	background:rgba(0,0,0,0.075);
+}
+
+/* DESCRIPTION */
+
+.frm-desc {
+	width:470px;
+	margin-left:25px;
+	
+	text-align:justify;
+	font-size:11px;
+}
+
+/* STATS */
+
+.frm-stats, .frm-lp {
+	text-transform:uppercase;
+	font-size:11px;
+	width:200px;
+	margin-left:25px;
+	
+	text-align:center;
+}
+
+.p-date {font-size:9px;}
+
+.frm-lp {margin-top:5px;}
+
+.frm-lp .lpt, .frm-lp .lpa {text-decoration:none;}
+
+.frm-lp .lpa {font-weight:bolder;}
+.frm-lp .lpt {color:rgba(255,255,255,0.675);}
+
+.frm-lp a{color:#fff;transition:all ease-in-out .125s;-webkit-transition:all ease-in-out .125s;-moz-transition:all ease-in-out .125s;-ms-transition:all ease-in-out .125s;-o-transition:all ease-in-out .125s;}
+.frm-lp a:hover {opacity:0.5;}
